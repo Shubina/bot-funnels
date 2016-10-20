@@ -1,0 +1,253 @@
+a:hover {
+    text-decoration: none;
+}
+#main-menu-wrapper {
+    /*height: 100vh;*/
+}
+#main-menu-wrapper li {
+    padding: 1% 0;
+}
+#main-menu-wrapper li a {
+    line-height: 19px;
+}
+#main-menu-wrapper .wraplist.bottom {
+    margin-top: 15%;
+
+} 
+.page-topbar .message-toggle-wrapper, 
+.page-topbar .notify-toggle-wrapper, 
+.page-topbar .searchform, 
+.page-topbar li.profile {
+    opacity: 1;
+}
+.table>thead>tr>th, 
+.table>tbody>tr>th, 
+.table>tfoot>tr>th, 
+.table>thead>tr>td, 
+.table>tbody>tr>td, 
+.table>tfoot>tr>td {
+    white-space: nowrap;
+}
+.bot-table .dataTables_wrapper .dataTables_length, 
+.bot-table .dataTables_wrapper .dataTables_filter, 
+.bot-table .dataTables_wrapper .dataTables_info, 
+.bot-table .dataTables_wrapper .dataTables_processing, 
+.bot-table .dataTables_wrapper .dataTables_paginate {
+    display: none;
+}
+.bot-table {
+    border: 1px solid #1fb5ac;
+    margin-bottom: 30px;
+}
+.bot-table h3 {
+    text-align: center;
+    background: #fa8564;
+    color: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+.bot-table h3 a {
+    color: #fff;
+}
+.bot-table .sms {
+    background: #ccc;
+    border-radius: 15px;
+}
+.table-btn {
+    border-radius: 15px;
+    padding: 3px;
+    cursor: pointer;
+}
+.table-btn.add { 
+    color: #1fb5ac;
+    border: 1px solid #1fb5ac;
+}
+.table-btn.del { 
+    color: #fa8564;
+    border: 1px solid #fa8564;
+}
+.bot-table td {
+    vertical-align: middle;
+}
+
+/*page settings*/
+    /*settings*/
+.search_data .tab-pane {
+    height: auto;
+}
+.channel-box {
+    border: 1px dotted #1fb5ac;
+    border-radius: 30px;
+    padding-bottom: 2%;
+}
+.channel-add {
+    display: flex;
+    justify-content: space-around;
+}
+
+.channel {
+    cursor: pointer;
+    display: inline-block;
+}
+.channel:hover {
+    transform: scale(1.5);
+    transition: .5s;
+    background: #fff;
+}
+.channel-wrap {
+    background: #E0FFFF;
+    margin: 2%;
+    padding: 30px;
+}
+.channel-wrap h3 {
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0 3%;
+}
+
+.channel-wrap .del {
+    float: right;
+    display: inline-block;
+    text-decoration: none;
+}
+.channel-wrap .log-in {
+    border: 1px solid #40E0D0;
+    display: inline-block;
+    padding: 0.5% 1%; 
+    margin: 0 0 4% 4%;
+}
+.channel-wrap .btn {
+    margin-top: 10px;
+    border-radius: 10px; 
+}
+.channel-wrap .btn:hover {
+    transform: scale(1.2);
+    transition: .5s;
+    background: #fff;
+    color: rgba(31, 181, 172, 1.0);
+    border: 1px solid #40E0D0;
+
+}
+/*settings-payment*/
+.pay-box .btn{
+    display: block;
+    margin: 20px auto 0;
+    width: 200px;
+}
+/*settings-bot*/
+.bot-box {
+    position: relative;
+}
+.bot-block {
+    border: 1px dotted #1fb5ac;
+    border-radius: 30px;
+    padding-bottom: 2%;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.bot-block:after {
+    content: '';
+    height: 30px;
+    width: 2px;
+    background: #1fb5ac;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.bot-block.main:after {
+    height: 0;
+}
+.bot-block:hover {
+    background: #ADD8E6;
+    transform: scale(1.05);
+    transition: .3s;
+}
+.bot-block:hover:before {
+    content: '+';
+    background: #0E1250;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border-radius: 50%;
+    font-size: 30px;
+    padding-top: 2px;
+} 
+.card-wrap {
+    background: #F0E68C;
+    
+}
+.card-bot {    
+    display: none;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.card-wrap .btn {
+    background: #1fb5ac;
+    display: block;
+    color: #fff;
+    margin-top: 100px;
+}
+.click-close {
+    content: 'x';
+    background: #0E1250;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.card {
+    margin: 2%;
+    border: 1px dotted #1fb5ac;
+    padding: 25px;
+}
+.card .card-btn {
+    display: block;
+    text-align: center;
+    border: 1px solid #BDB76B;
+    border-radius: 30px;
+    margin: 1% 0;
+}
+.card:before {
+    content: 'x';
+    background: rgba(250, 133, 100, 1.0);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: -31px;
+    font-size: 30px;
+    text-align: center;
+} 
+.card:last-child:before {
+    height: 0;
+    content: "";
+}
+.card-empty {
+    text-align: center;
+    cursor: pointer;
+}
+.card-empty i {
+    display: block;
+    font-size: 50px;
+    text-align: center;
+}
+    /*settings-bot-unrecognized-msgs*/
+.unrecognized-msgs .bot-table {
+    border: none;
+}
