@@ -2,7 +2,7 @@ a:hover {
     text-decoration: none;
 }
 #main-menu-wrapper {
-    /*height: 100vh;*/
+    height: 100vh;
 }
 #main-menu-wrapper li {
     padding: 1% 0;
@@ -19,6 +19,24 @@ a:hover {
 .page-topbar .searchform, 
 .page-topbar li.profile {
     opacity: 1;
+}
+.connect-block {
+    display: inline-block;
+    line-height: 60px;
+    margin-left: 15%;
+}
+.connect-block a {
+    border: 1px solid #ccc;
+    padding: 3px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+.connect-block a:last-child {
+    background: #1fb5ac;
+    color: #fff;
+}
+.connect-block a i {
+    margin-right: 5px;
 }
 .table>thead>tr>th, 
 .table>tbody>tr>th, 
@@ -180,10 +198,7 @@ a:hover {
     font-size: 30px;
     padding-top: 2px;
 } 
-.card-wrap {
-    background: #F0E68C;
-    
-}
+
 .card-bot {    
     display: none;
     z-index: 10;
@@ -193,61 +208,150 @@ a:hover {
 }
 .card-wrap .btn {
     background: #1fb5ac;
-    display: block;
+    display: inline-block;
     color: #fff;
-    margin-top: 100px;
+    margin-left: 50px;
+}
+.card-wrap h2 {
+    display: inline-block;
+    margin-right: 15px;
+}
+.card {
+    margin: 2%;
+    border: 1px dotted #1fb5ac;
+    width: 50%;
+    text-align: center;
+}
+.card-btn {
+    display: block;
+    text-align: center;
+    margin: 1% 0;
+    outline: none;
+    border: none;
+    display: inline-block;
+    background: transparent;
+    width: 100%;
+}
+.controls {
+    position: relative;
+}
+.controls:hover .click-close {
+    display: block;
+}
+.controls .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .click-close {
-    content: 'x';
-    background: #0E1250;
-    color: #fff;
+    color: #ccc;
     width: 30px;
     height: 30px;
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
-    cursor: pointer;
-}
-.card {
-    margin: 2%;
-    border: 1px dotted #1fb5ac;
-    padding: 25px;
-}
-.card .card-btn {
-    display: block;
-    text-align: center;
-    border: 1px solid #BDB76B;
-    border-radius: 30px;
-    margin: 1% 0;
-}
-.card:before {
-    content: 'x';
-    background: rgba(250, 133, 100, 1.0);
-    color: #fff;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 0;
-    right: -31px;
-    font-size: 30px;
-    text-align: center;
+    display: none;
 } 
 .card:last-child:before {
     height: 0;
     content: "";
 }
 .card-empty {
-    text-align: center;
     cursor: pointer;
+    padding: 5%;
 }
-.card-empty i {
-    display: block;
-    font-size: 50px;
-    text-align: center;
-}
+
     /*settings-bot-unrecognized-msgs*/
 .unrecognized-msgs .bot-table {
     border: none;
+}
+/*build*/
+.card>ul {
+    padding-left: 0;
+    margin: 0;
+}
+.card>ul li {
+    list-style-type: none;
+    text-align: left;
+    padding: 10px 0 10px 10px;
+    font: 20px/25px 'Open Sans', Arial, Helvetica, sans-serif;
+}
+.card>ul li i {
+    margin-right: 10px;
+    display: inline-block;
+}
+.card>ul li:hover {
+    background: #ccc;
+}
+.controls-select {
+    display: none;
+}
+.close-block {
+    cursor: pointer;
+    font-size: 20px;
+    float: right;
+}
+.popup-editor {
+    padding: 10px;
+    border: 1px solid #ccc;
+    justify-content: space-between;
+    display: none;
+}
+.popup-editor i {
+    font-size: 20px;
+}
+.editor-list {
+    display: inline;
+    padding-left: 0;
+    margin: 0;
+
+}
+.editor-list li {
+    display: inline;
+    background: #ccc;
+    cursor: pointer;
+    padding: 5px;
+}
+.popup-editor i:first-child {
+    margin-right: 10px;
+}
+.popup-editor input {
+    outline: none;
+    border: none;
+    margin-right: 10px;
+}
+.suggestion-list {
+   position: absolute;
+    padding: 0;
+    top: 51px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+    border: 1px solid transparent;
+}
+.suggestion-list li {
+    list-style: none;
+
+}
+.editor-box {
+    
+    position: relative;
+    padding: 2px;
+}
+.add-card  {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 50%;
+    margin: 2%;
+    padding: 5px;
+}
+.add-card textarea {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
 }
