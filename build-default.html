@@ -508,7 +508,7 @@
                                             
                                             <h4>Content blocks</h4>
                                             <li>
-                                                <a href="settings-bot-unrecognized-msgs.html">
+                                                <a href="build-img.html">
                                                     <i class="fa fa-file-image-o"></i> Image
                                                 </a>
                                             </li>
@@ -527,7 +527,7 @@
                                             </li>
                                             <h4>All other blocks</h4>
                                             <li><a href="">Broadcasting</a></li>
-                                            <li><a href="">Form</a></li>
+                                            <li><a href="build-form.html">Form</a></li>
                                             <li><a href="">+Add block</a></li>
 
                                              <li><a href="">+Add group</a></li>
@@ -543,7 +543,39 @@
                                                             
                                                             <h2>Дефолтное сообщение</h2> 
                                                             <button type="button" class="btn">Save changes</button>
-                                                            
+                                                            <div class="card">
+                                                                <div class="controls">
+                                                                    <i class="fa fa-trash click-close"></i>
+                                                                    <textarea class="form-control autogrow" rows='10%' placeholder="Всем привет"></textarea>
+                                                                </div>
+                                                                <div class="controls">
+                                                                    <i class="fa fa-trash click-close"></i>
+                                                                    <textarea name="" rows='1' class="card-btn">Main menu</textarea>
+                                                                    <button type="button" class="btn btn-default">Default</button>
+                                                                </div>
+                                                                <div class="popup-editor">
+                                                                    <span class="editor-type-buttons">
+                                                                        <a href=""><i class="fa fa-share-square-o"></i></a>
+                                                                        <a href=""><i class="fa fa-link"></i></a>
+                                                                    </span>
+                                                                    <div class="editor-box">
+                                                                        <ul class="editor-list">
+                                                                            <li>Default <span>x</span></li>
+                                                                        </ul>
+                                                                        <input type="text" placeholder="Enter a block(autocomplete)">
+                                                                    
+                                                                    <span class="editor-type-buttons">
+                                                                        <a href=""><i class="fa fa-check"></i></a>
+                                                                        <a href=""><i class="fa fa-trash"></i></a>
+                                                                    </span>
+                                                                    <ul class="suggestion-list">
+                                                                        <li>Block1</li>
+                                                                        <li>Block2</li>
+                                                                        <li>Block3</li>
+                                                                    </ul></div>
+                                                                </div>
+                                                                <a href="" class="card-btn new-btn">+ Add button</a>
+                                                            </div>
                                                             
                                                             <div class="card card-empty">
                                                                 <h3>Add a card:</h3>
@@ -800,14 +832,16 @@
 
 
 <script>
-$(document).ready(function() {    
-    $('.controls .btn-default').click( function(event){
+$(document).ready(function() {
+    $('.controls .btn-default').click(function(){
         event.preventDefault();
-        $('.controls-select').css('display', 'block')
+        $('.popup-editor').toggleClass('openPop');
+
     });
-    // $('.card').click( function(){
-    //     $('.controls-select').css('display', 'none')
-    // });
+
+    $(".p").click(function(){
+        $(".add-card").eq($(".p").index(this)).addClass("active").siblings().removeClass("active");
+    });
 });
 </script>
 

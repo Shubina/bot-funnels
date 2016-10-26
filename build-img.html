@@ -557,17 +557,31 @@
                                                                 <a href="" class="card-btn new-btn">+ Add button</a>
                                                             </div>
                                                             <div class="controls card card-empty">
-                                                                <a href="">
+                                                                <header class="panel_header ui-sortable-handle">
+                                                                    <h2 class="title pull-left">Image Panel</h2>
+                                                                    <div class="actions panel_actions pull-right">
+                                                                        <i class="box_toggle fa fa-chevron-down"></i>
+                                                                        <i class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></i>
+                                                                        <i class="box_close fa fa-times"></i>
+                                                                    </div>
+                                                                </header>
+                                                                <a href="" class="add-card-box">
                                                                     <i class="fa fa-trash click-close"></i>
                                                                     <i class="fa icon-lg fa-plus"></i>
                                                                     <h3>add image</h3>
                                                                 </a>
                                                             </div>
                                                             <div class="card">
-                                                                <div class="controls">
-                                                                    <i class="fa fa-trash click-close"></i>
-                                                                    <textarea class="form-control autogrow" rows='5' placeholder="Text"></textarea>
-                                                                </div>
+                                                                
+                                                                <header class="panel_header ui-sortable-handle">
+                                                                    <h2 class="title pull-left">Text Panel</h2>
+                                                                    <div class="actions panel_actions pull-right">
+                                                                        <i class="box_toggle fa fa-chevron-down"></i>
+                                                                        <i class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></i>
+                                                                        <i class="box_close fa fa-times"></i>
+                                                                    </div>
+                                                                </header>
+                                                                <textarea name="" rows='3' class="form-control autogrow">Enter the Text</textarea>
                                                                 <div class="controls">
                                                                     <i class="fa fa-trash click-close"></i>
                                                                     <textarea name="" rows='1' class="card-btn">Main menu</textarea>
@@ -853,14 +867,16 @@
 
 
 <script>
-$(document).ready(function() {    
-    $('.controls .btn-default').click( function(event){
-        // event.preventDefault();
-        $('.popup-editor').css('display', 'flex')
+$(document).ready(function() {
+    $('.controls .btn-default').click(function(){
+        event.preventDefault();
+        $('.popup-editor').toggleClass('openPop');
+
     });
-    // $('body').click( function(){
-    //     $('.popup-editor').css('display', 'none')
-    // });
+
+    $(".p").click(function(){
+        $(".add-card").eq($(".p").index(this)).addClass("active").siblings().removeClass("active");
+    });
 });
 </script>
 

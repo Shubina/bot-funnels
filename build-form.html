@@ -547,7 +547,7 @@
                                                             
                                                             <h2>User input</h2> 
                                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolore quia, quis quod quos, vero minus veritatis quaerat facilis recusandae hic tempore atque tenetur, labore soluta nihil cum? Vero, maiores.</p>
-                                                            <h3>Input:</h3>
+                                                            <h3 class="semi-bold">Input:</h3>
                                                             <div class="form-group">
                                                                 <label class="form-label" for="field-1">bot message</label><div class="controls">
                                                                     <input type="text" class="form-control" id="field-1" placeholder="Lorem ipsum dolor.">
@@ -559,9 +559,10 @@
                                                                     <input type="text" class="form-control" id="field-1" placeholder="consectetur adipisicing.">
                                                                 </div>
                                                             </div>
-                                                            <a href="" class="card-btn new-btn">+ Add fields</a>
+                                                            <a href="" class="card-btn new-btn btn-block">+ Add fields</a>
 
                                                             <div class="result-block">
+                                                                <h3 class="semi-bold">Result</h3>
                                                                 <form class="form-inline">
                                                                     <div class="form-group">
                                                                         <select class="form-control">
@@ -578,7 +579,6 @@
                                                                             <input type="email" class="form-control" id="subj" placeholder="Required">
                                                                         </div>
                                                                     </div>
-                                                                    <button type="submit" class="btn btn-primary">Sign in</button>
                                                                     
                                                                 </form>
 
@@ -828,14 +828,16 @@
 
 
 <script>
-$(document).ready(function() {    
-    $('.controls .btn-default').click( function(event){
-        // event.preventDefault();
-        $('.popup-editor').css('display', 'flex')
+$(document).ready(function() {
+    $('.controls .btn-default').click(function(){
+        event.preventDefault();
+        $('.popup-editor').toggleClass('openPop');
+
     });
-    // $('body').click( function(){
-    //     $('.popup-editor').css('display', 'none')
-    // });
+
+    $(".p").click(function(){
+        $(".add-card").eq($(".p").index(this)).addClass("active").siblings().removeClass("active");
+    });
 });
 </script>
 

@@ -576,36 +576,89 @@
                                                                         <li>Block1</li>
                                                                         <li>Block2</li>
                                                                         <li>Block3</li>
-                                                                </ul></div>
+                                                                    </ul></div>
                                                                 </div>
-                                                                
-                                                                
-                                                                
-                                                                    
-                                                                
-                                                                
-                                                                    
-                                                                
                                                                 <a href="" class="card-btn new-btn">+ Add button</a>
                                                             </div>
                                                             
-                                                            <div class="card card-empty">
+                                                            <div class="card">
                                                                 <h3>Add a card:</h3>
                                                                 <ul>
-                                                                    <li><a href=""><i class="fa fa-file-text"></i>Text card</a></li>
-                                                                    <li><a href=""><i class="fa fa-photo"></i>Image</a></li>
-                                                                    <li><a href=""><i class="fa fa-photo"></i>AI</a></li>
-                                                                    <li><a href=""><i class="fa fa-photo"></i>Расписание</a></li>
-                                                                    <li><a href=""><i class="fa fa-photo"></i>Form</a></li>
+                                                                    <li class="p"><i class="fa fa-file-text"></i>Text card</li>
+                                                                    <li class="p"><i class="fa fa-photo"></i>Image</li>
+                                                                    <li class="p"><i class="fa fa-photo"></i>AI</li>
+                                                                    <li class="p"><i class="fa fa-photo"></i>Расписание</li>
+                                                                    <li class="p"><i class="fa fa-photo"></i>Form</li>
                                                                 </ul>
                                                             </div>
                                                             <div class="add-card">
+                                                                <header class="panel_header ui-sortable-handle">
+                                                                    <h2 class="title pull-left">Text Panel</h2>
+                                                                    <div class="actions panel_actions pull-right">
+                                                                        <i class="box_toggle fa fa-chevron-down"></i>
+                                                                        <i class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></i>
+                                                                        <i class="box_close fa fa-times"></i>
+                                                                    </div>
+                                                                </header>
+                                                                
+                                                                    <textarea name="" rows='1' class="card-btn">Enter the Text</textarea>
+                                                                    <a href="" class="card-btn new-btn">+ Add button</a>
+                                                                
+                                                            </div>
+                                                            <div class="add-card">
+                                                                <header class="panel_header ui-sortable-handle">
+                                                                    <h2 class="title pull-left">Image Panel</h2>
+                                                                    <div class="actions panel_actions pull-right">
+                                                                        <i class="box_toggle fa fa-chevron-down"></i>
+                                                                        <i class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></i>
+                                                                        <i class="box_close fa fa-times"></i>
+                                                                    </div>
+                                                                </header>
+                                                                
+                                                                <a href="" class="add-card-box">
+                                                                    <i class="fa icon-lg fa-plus"></i>
+                                                                    <h3>add image</h3>
+                                                                </a>
+                                                                <textarea name="" rows='1' class="card-btn">Enter the Text</textarea>
+                                                                <a href="" class="card-btn new-btn">+ Add button</a>
+                                                            </div>
+                                                            <div class="add-card">
+                                                                <header class="panel_header ui-sortable-handle">
+                                                                    <h2 class="title pull-left">AI Panel</h2>
+                                                                    <div class="actions panel_actions pull-right">
+                                                                        <i class="box_toggle fa fa-chevron-down"></i>
+                                                                        <i class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></i>
+                                                                        <i class="box_close fa fa-times"></i>
+                                                                    </div>
+                                                                </header>
                                                                 <i class="fa fa-trash click-close"></i>
                                                                 <textarea name="" rows='1' class="card-btn">Enter the Text</textarea>
                                                                 <a href="" class="card-btn new-btn">+ Add button</a>
                                                             </div>
                                                             <div class="add-card">
-                                                                <div class="card-box"></div>
+                                                                <header class="panel_header ui-sortable-handle">
+                                                                    <h2 class="title pull-left">Расписание Panel</h2>
+                                                                    <div class="actions panel_actions pull-right">
+                                                                        <i class="box_toggle fa fa-chevron-down"></i>
+                                                                        <i class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></i>
+                                                                        <i class="box_close fa fa-times"></i>
+                                                                    </div>
+                                                                </header>
+                                                                <i class="fa fa-trash click-close"></i>
+                                                                <textarea name="" rows='1' class="card-btn">Enter the Text</textarea>
+                                                                <a href="" class="card-btn new-btn">+ Add button</a>
+                                                            </div>
+                                                            <div class="add-card">
+                                                                <header class="panel_header ui-sortable-handle">
+                                                                    <h2 class="title pull-left">Form Panel</h2>
+                                                                    <div class="actions panel_actions pull-right">
+                                                                        <i class="box_toggle fa fa-chevron-down"></i>
+                                                                        <i class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></i>
+                                                                        <i class="box_close fa fa-times"></i>
+                                                                    </div>
+                                                                </header>
+                                                                <i class="fa fa-trash click-close"></i>
+                                                                <textarea name="" rows='1' class="card-btn">Enter the Text</textarea>
                                                                 <a href="" class="card-btn new-btn">+ Add button</a>
                                                             </div>
                                                             
@@ -853,14 +906,16 @@
 
 
 <script>
-$(document).ready(function() {    
-    $('.controls .btn-default').click( function(event){
-        // event.preventDefault();
-        $('.popup-editor').css('display', 'flex')
+$(document).ready(function() {
+    $('.controls .btn-default').click(function(){
+        event.preventDefault();
+        $('.popup-editor').toggleClass('openPop');
+
     });
-    // $('body').click( function(){
-    //     $('.popup-editor').css('display', 'none')
-    // });
+
+    $(".p").click(function(){
+        $(".add-card").eq($(".p").index(this)).addClass("active").siblings().removeClass("active");
+    });
 });
 </script>
 

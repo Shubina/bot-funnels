@@ -8,7 +8,7 @@ a:hover {
     padding: 1% 0;
 }
 #main-menu-wrapper li a {
-    line-height: 19px;
+    line-height: 53px;
 }
 #main-menu-wrapper .wraplist.bottom {
     margin-top: 15%;
@@ -212,12 +212,12 @@ a:hover {
     color: #fff;
     margin-left: 50px;
 }
-.card-wrap h2 {
+.card-wrap>h2 {
     display: inline-block;
-    margin-right: 15px;
+    margin: 0 15px 15px 0;
 }
 .card {
-    margin: 2%;
+    margin: 2% 0;
     border: 1px dotted #1fb5ac;
     width: 50%;
     text-align: center;
@@ -231,6 +231,7 @@ a:hover {
     display: inline-block;
     background: transparent;
     width: 100%;
+    text-decoration: none;
 }
 .controls {
     position: relative;
@@ -260,7 +261,6 @@ a:hover {
 }
 .card-empty {
     cursor: pointer;
-    padding: 5%;
 }
 
     /*settings-bot-unrecognized-msgs*/
@@ -285,6 +285,9 @@ a:hover {
 .card>ul li:hover {
     background: #ccc;
 }
+.card .p {
+    cursor: pointer;
+}
 .controls-select {
     display: none;
 }
@@ -298,6 +301,14 @@ a:hover {
     border: 1px solid #ccc;
     justify-content: space-between;
     display: none;
+}
+
+.openPop {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
 }
 .popup-editor i {
     font-size: 20px;
@@ -338,8 +349,7 @@ a:hover {
     list-style: none;
 
 }
-.editor-box {
-    
+.editor-box {    
     position: relative;
     padding: 2px;
 }
@@ -348,10 +358,34 @@ a:hover {
     border-radius: 10px;
     width: 50%;
     margin: 2%;
-    padding: 5px;
+    padding: 5px 0;
+    display: none;
+}
+.add-card.active {
+    display: block;
 }
 .add-card textarea {
     border: 1px solid #ccc;
     border-radius: 10px;
+}
+.add-card-box {
+    display: block;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+.panel_header {
+    padding-left: 12px;
+    border-bottom: 1px solid #ccc !important;
+}
+/*build-form*/
+.btn-block {
+    bottom: 1px solid #ccc;
+}
+.result-block {
+    padding: 20px 0;
+}
 
+.form-label {
+    display: block;
 }
